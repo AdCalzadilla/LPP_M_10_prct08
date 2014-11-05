@@ -15,7 +15,7 @@ describe Exam do
 		@myNode = Node.new(3,2)
 		@myList = List.new(5)
 		@myArray = [3,5,8,2,7,10]
-		#@myTrueFalseAsk = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.")
+		@myTrueFalseAsk = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.")
 	end
 
 	describe "# Simple_Selection." do
@@ -102,13 +102,24 @@ describe Exam do
  			myExam.add(@pS5)
  		end
  	end
-=begin
+
  	describe "# TrueFalse." do
  		it "Debe existir una pregunta cuya respuesta sea: Cierto o Falso." do
- 			@myTrueFalseAsk.to_s.should eq("Es apropiado que una clase Tablero herede de una clase Juego.\na)Cierto\nb)Falso")
+ 			@myTrueFalseAsk.to_s.should eq("Es apropiado que una clase Tablero herede de una clase Juego.\na)Cierto\nb)Falso\n")
  		end
  	end
-=end
+
+ 	describe "# Simple_Selection heredado de Question." do
+ 		it "Debe existir una pregunta de respuestas simples (prct07)." do
+ 			@optionsSs2={
+ 				"a" => "Una instancia de la clase Class",
+				"b" => "Una constante",
+				"c" => "Un objeto",
+				"D" => "Ninguna de las anteriores"
+ 			}
+ 			@sS2 = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend\n",@optionsSs2)
+ 		end
+ 	end
 end
 
 
