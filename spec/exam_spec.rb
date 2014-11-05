@@ -12,7 +12,7 @@ describe Exam do
 		}
 
 		@sS1 = Simple_Selection.new("¿Quien va a ser el balon de oro?",@options1)
-		@myNode = Node.new(3,2)
+		@myNode = Node.new(3,nil,2)
 		@myList = List.new(5)
 		@myArray = [3,5,8,2,7,10]
 		@myTrueFalseAsk = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.")
@@ -118,6 +118,15 @@ describe Exam do
 				"D" => "Ninguna de las anteriores"
  			}
  			@sS2 = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend\n",@optionsSs2)
+ 		end
+ 	end
+
+ 	describe "# Ejemplo del enunciado de la práctica 7. (Lista doblemente enlazada, Herencia en las preguntas)." do
+ 		it "introduzco en una lista doblemente enlazada una pregunta de selección simple y otra de verdadero o falso." do
+ 			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.")
+			myNormalQuestion = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend",@optionsP3)
+			MyNewExam = List.new(myNormalQuestion)
+			MyNewExam.add(myAskTrue)
  		end
  	end
 end

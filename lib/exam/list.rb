@@ -1,5 +1,5 @@
 
-Node = Struct.new(:value, :next)
+Node = Struct.new(:value, :prev, :next)
 
 class List
 	def initialize(value)
@@ -7,26 +7,56 @@ class List
 	end
 
 	def pop()
-        freeNode = @head.value
-      	@head = @head.next
-        freeNode
-   	end
-
-   	def add(value)
-        current = @head
-        while current.next != nil
-            current = current.next
-        end 
-        current.next = Node.new(value,nil)
+    freeNode = @head.value
+    if @head.next == nil
+      return
     end
+    @head = @head.next
+    @head.prev = nil
+    freeNode
+  end
 
-    def add_many(values)
+  def add(value)
+    current = @head
+    while current.next != nil
+      current = current.next
+    end 
+    current.next = Node.new(value,current)
+  end
+
+  def add_top(value)
+    current = @head
+    nodeNew = Node.new(value)
+    @head = nodeNew
+    current.prev = @head
+    @head.next = current
+  end
+
+  def add_many(values)
 		values.each do |x| 
-       		add(x)
-      	end
+      add(x)
+    end
 	end
 
 	def head
 		@head.value.to_s
 	end
+
+#Método creado para comprobar que está doblemente enlazada.
+  def print_reverse
+    current = @head
+    while current.next != nil
+      current = current.next
+    end
+    while current.prev != nil
+      puts current.value
+      current = current.prev     
+    end
+    puts current.value
+  end
 end
+
+
+
+
+
