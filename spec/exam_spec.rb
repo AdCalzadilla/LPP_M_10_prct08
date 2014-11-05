@@ -15,6 +15,7 @@ describe Exam do
 		@myNode = Node.new(3,2)
 		@myList = List.new(5)
 		@myArray = [3,5,8,2,7,10]
+		@myTrueFalseAsk = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.")
 	end
 
 	describe "# Simple_Selection." do
@@ -99,6 +100,12 @@ describe Exam do
  			myExam.add(@pS3)
  			myExam.add(@pS4)
  			myExam.add(@pS5)
+ 		end
+ 	end
+
+ 	describe "# TrueFalse." do
+ 		it "Debe existir una pregunta cuya respuesta sea: Cierto o Falso." do
+ 			@myTrueFalseAsk.to_s.should eq("Es apropiado que una clase Tablero herede de una clase Juego.\na)Cierto\nb)Falso")
  		end
  	end
 end
