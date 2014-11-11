@@ -148,7 +148,7 @@ describe Exam do
 		end
 	end
 
-	describe "# Práctica 8: Comprobar el método enumerable en la clase List." do
+	describe "# Práctica 8: Comprobar el método Enumerable en la clase List." do
 		it "Creo dos preguntas, las introduzco en una lista y miro cual tiene mayor dificultad." do
 			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.",8)
 			myNormalQuestion = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
@@ -156,8 +156,12 @@ describe Exam do
 			MyNewExam.add(myAskTrue)
 			x = MyNewExam.all?
 			expect(x).to eq(true)
+		end
 
-			expect(MyNewExam.max).to eq("Es apropiado que una clase Tablero herede de una clase Juego.\na)Cierto\nb)Falso\n")
+		it "# Práctica 8: Segunda comprobación del método Enumerable en la clase List" do
+			myNumberList = List.new(5)
+			myNumberList.add_many([2,5,3,9,6,7,1])
+			expect(myNumberList.max).to eq(9)
 		end
 	end
 

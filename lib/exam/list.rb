@@ -8,6 +8,9 @@ class Node
 end
 
 class List
+
+  include Enumerable
+
 	def initialize(value)
 		@head = Node.new(value)
 	end
@@ -47,6 +50,14 @@ class List
 	def head
 		@head.value.to_s
 	end
+
+  def each
+    current = @head
+    while current != nil 
+      yield current.value
+      current = current.next
+    end
+  end
 
 #Método creado para comprobar que está doblemente enlazada.
   def print_reverse
