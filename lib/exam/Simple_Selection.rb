@@ -2,7 +2,7 @@ require_relative 'question'
 
 class Simple_Selection < Question
 	attr_reader :ask,:answers
-
+	
 	def initialize(ask, answers)
 		super(ask)
 		@answers = answers
@@ -13,7 +13,7 @@ class Simple_Selection < Question
 		@answers.each do |m,i| 
 			cadena += "#{m})#{i}\n"
     	end
-    	cadena
+	   	cadena
 	end
 
 

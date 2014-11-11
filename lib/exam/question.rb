@@ -1,14 +1,17 @@
-class Question
+#module Exam
+	class Question
 
-	attr_reader :ask
+		include Comparable
 
-	def initialize(ask)
-		@ask = ask
+		attr_reader :ask
+
+		def initialize(ask)
+			@ask = ask
+		end
+
+		def to_s
+			cadena = "#{@ask}\n"
+			cadena
+		end
 	end
-
-	def to_s
-		cadena = "#{@ask}\n"
-		cadena
-	end
-
-end
+#end

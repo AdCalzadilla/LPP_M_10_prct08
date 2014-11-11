@@ -122,13 +122,23 @@ describe Exam do
  	end
 
  	describe "# Ejemplo del enunciado de la práctica 7. (Lista doblemente enlazada, Herencia en las preguntas)." do
- 		it "introduzco en una lista doblemente enlazada una pregunta de selección simple y otra de verdadero o falso." do
+ 		it "Introduzco en una lista doblemente enlazada una pregunta de selección simple y otra de verdadero o falso." do
  			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.")
 			myNormalQuestion = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend",@optionsP3)
 			MyNewExam = List.new(myNormalQuestion)
 			MyNewExam.add(myAskTrue)
  		end
  	end
+
+ 	describe "# Comprobar que myAskTrue, myNormalQuestion son de clases diferentes." do
+ 		it "Creo varias preguntas y con el método is_a pregunto que tipo de clase es." do
+ 			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.")
+ 			myNormalQuestion = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend",@optionsP3)
+ 			expect(myAskTrue.is_a? TrueFalse).to eq(true)
+ 			expect(myNormalQuestion.is_a? Simple_Selection).to eq(true)
+ 		end
+ 	end
+
 end
 
 
