@@ -1,5 +1,5 @@
 require "exam/version"
-require_relative 'exam/question.rb'
+require "exam/question"
 require "exam/Simple_Selection"
 require "exam/list"
 require "exam/trueFalse"

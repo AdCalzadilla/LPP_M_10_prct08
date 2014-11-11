@@ -139,12 +139,25 @@ describe Exam do
  		end
  	end
 
- 	describe "# Comprobar que el los métodos comparable se han introducido correctamente." do
+ 	describe "# Práctica 8: Comprobar que el los métodos comparable se han introducido correctamente." do
  		it "Creo dos preguntas y comparo su dificultad." do
  			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.",8)
 			myNormalQuestion = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
 			x = myAskTrue > myNormalQuestion
 			expect(x).to eq(true)
+		end
+	end
+
+	describe "# Práctica 8: Comprobar el método enumerable en la clase List." do
+		it "Creo dos preguntas, las introduzco en una lista y miro cual tiene mayor dificultad." do
+			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.",8)
+			myNormalQuestion = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
+			MyNewExam = List.new(myNormalQuestion)
+			MyNewExam.add(myAskTrue)
+			x = MyNewExam.all?
+			expect(x).to eq(true)
+
+			expect(MyNewExam.max).to eq("Es apropiado que una clase Tablero herede de una clase Juego.\na)Cierto\nb)Falso\n")
 		end
 	end
 

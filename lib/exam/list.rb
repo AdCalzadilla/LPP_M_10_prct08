@@ -1,5 +1,11 @@
 
 Node = Struct.new(:value, :prev, :next)
+class Node
+  include Comparable
+  def <=> (other)
+    value <=> other.value
+  end
+end
 
 class List
 	def initialize(value)
