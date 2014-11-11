@@ -3,8 +3,8 @@ require_relative 'question'
 class Simple_Selection < Question
 	attr_reader :ask,:answers
 	
-	def initialize(ask, answers)
-		super(ask)
+	def initialize(ask, answers, difficulty = 0)
+		super(ask, difficulty)
 		@answers = answers
 	end
 

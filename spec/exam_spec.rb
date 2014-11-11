@@ -139,6 +139,15 @@ describe Exam do
  		end
  	end
 
+ 	describe "# Comprobar que el los métodos comparable se han introducido correctamente." do
+ 		it "Creo dos preguntas y comparo su dificultad." do
+ 			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.",8)
+			myNormalQuestion = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
+			x = myAskTrue > myNormalQuestion
+			expect(x).to eq(true)
+		end
+	end
+
 end
 
 

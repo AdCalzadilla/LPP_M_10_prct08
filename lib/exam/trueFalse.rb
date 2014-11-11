@@ -1,12 +1,12 @@
 require_relative 'question'
 
 class TrueFalse < Question
-	def initialize(ask)
+	def initialize(ask, difficulty= 0)
 		@answers = { 
 			"a" => "Cierto",
 			"b" => "Falso"
 		}
-		super(ask)
+		super(ask, difficulty)
 	end
 
 	def to_s
