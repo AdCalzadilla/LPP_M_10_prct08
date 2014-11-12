@@ -12,4 +12,5 @@
 *.o
 *.a
 *.*~
+*.travis
 mkmf.log
