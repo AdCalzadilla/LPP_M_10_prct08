@@ -19,10 +19,9 @@
     		return nil unless other.is_a? Question
     		@difficulty <=> other.difficulty
   		end
-=begin
+
   		def ==(other)
 			@difficulty == other.difficulty# && @ask == other.ask
  		end
-=end
 	end
 #end
