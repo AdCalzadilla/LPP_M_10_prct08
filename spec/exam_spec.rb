@@ -143,8 +143,15 @@ describe Exam do
  		it "Creo dos preguntas y comparo su dificultad." do
  			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.",8)
 			myNormalQuestion = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
+			myThirdQuestion = TrueFalse.new("Rellenando la lista.",5)
 			x = myAskTrue > myNormalQuestion
 			expect(x).to eq(true)
+			expect(myAskTrue < myNormalQuestion).to eq(false)
+			expect(myAskTrue >= myNormalQuestion).to eq(true)
+			expect(myAskTrue <= myNormalQuestion).to eq(false)
+			expect(myAskTrue == myNormalQuestion).to eq(false)
+			#Metodo between? no se si funciona.
+			expect(myAskTrue.between?(myNormalQuestion, myThirdQuestion)).to eq(false)
 		end
 	end
 
@@ -162,6 +169,17 @@ describe Exam do
 			myNumberList = List.new(5)
 			myNumberList.add_many([2,5,3,9,6,7,1])
 			expect(myNumberList.max).to eq(9)
+		end
+
+		it "# Práctica 8: Tercera comprobación del método Enumerable introduciendo preguntas a la lista." do
+			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.",8)
+			myNormalQuestion = Simple_Selection.new("¿Cuál es el tipo de objeto en el siguiente código en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
+			MyNewExam = List.new(myNormalQuestion)
+			MyNewExam.add(myAskTrue)
+			x = MyNewExam.all?
+			expect(x).to eq(true)
+			y = MyNewExam.max
+			expect(y.to_s).to eq("Es apropiado que una clase Tablero herede de una clase Juego.\na)Cierto\nb)Falso\n")
 		end
 	end
 
