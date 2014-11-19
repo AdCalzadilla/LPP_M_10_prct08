@@ -18,7 +18,7 @@ class List
 	def pop()
     freeNode = @head.value
     if @head.next == nil
-      return
+      return freeNode
     end
     @head = @head.next
     @head.prev = nil
