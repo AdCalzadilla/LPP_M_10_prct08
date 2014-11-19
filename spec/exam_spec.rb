@@ -183,6 +183,30 @@ describe Exam do
 		end
 	end
 
+	describe "# Práctica 9: Creación de la clase Examen." do
+		it "# Práctica 9: creo un objeto de la clase Examen." do
+			pS1 = Simple_Selection.new(@pregunta1,@optionsP1)
+			pT1 = TrueFalse.new("2.-) Es apropiado que una clase Tablero herede de una clase Juego.",8)
+			pT2 = TrueFalse.new("3.-) En Ruby todo es un objeto.",2)
+
+			myQuestions = [pS1,pT1,pT2]
+			myAnswers = ["b","b","a"]
+			myFirstExam = Examen.new(myQuestions,myAnswers)
+		end
+
+		it "# Práctica 9: Creación de la clase interfaz donde el usuario puede hacer el examen." do
+			pS1 = Simple_Selection.new(@pregunta1,@optionsP1)
+			pT1 = TrueFalse.new("2.-) Es apropiado que una clase Tablero herede de una clase Juego.",8)
+			pT2 = TrueFalse.new("3.-) En Ruby todo es un objeto.",2)
+
+			myQuestions = [pS1,pT1,pT2]
+			myAnswers = ["b","b","a"]
+
+			mySecondExamen = Examen.new(myQuestions,myAnswers)
+
+			interfaceExamen = Interface.new(mySecondExamen)
+		end
+	end
 end
 
 

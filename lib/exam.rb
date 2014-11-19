@@ -3,6 +3,8 @@ require "exam/question"
 require "exam/Simple_Selection"
 require "exam/list"
 require "exam/trueFalse"
+require "exam/examen"
+require "exam/interface"
 
 module Exam
   # Your code goes here...
