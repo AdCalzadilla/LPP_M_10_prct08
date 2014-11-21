@@ -185,7 +185,7 @@ describe Exam do
 	end
 
 	describe "# Práctica 9: Creación de la clase Examen." do
-		it "# Práctica 9: creo un objeto de la clase Examen." do
+		it "# Práctica 9: creo un objeto de la clase Examen. Compruebo que se introducen las respuestas y que las preguntas son de tipo List." do
 			pS1 = Simple_Selection.new(@pregunta1,@optionsP1)
 			pT1 = TrueFalse.new("2.-) Es apropiado que una clase Tablero herede de una clase Juego.",8)
 			pT2 = TrueFalse.new("3.-) En Ruby todo es un objeto.",2)
@@ -195,6 +195,8 @@ describe Exam do
 			myFirstExam = Examen.new(myQuestions,myAnswers)
 			z = myFirstExam.examAnswers.is_a?(Array)
 			expect(z).to eq(true)
+			y = myFirstExam.myExam.is_a?(List)
+			expect(y).to eq(true)
 		end
 
 		it "# Práctica 9: Creación de la clase interfaz donde el usuario puede hacer el examen." do
