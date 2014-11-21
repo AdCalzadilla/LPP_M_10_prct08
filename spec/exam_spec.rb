@@ -192,6 +192,8 @@ describe Exam do
 			myQuestions = [pS1,pT1,pT2]
 			myAnswers = ["b","b","a"]
 			myFirstExam = Examen.new(myQuestions,myAnswers)
+			z = myFirstExam.examAnswers.is_a?(Array)
+			expect(z).to eq(true)
 		end
 
 		it "# Práctica 9: Creación de la clase interfaz donde el usuario puede hacer el examen." do
