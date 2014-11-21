@@ -58,7 +58,7 @@ describe Exam do
  			@myList.head.should eq("5")
  		end
  		it "Prueba para la siguiente relacionn de preguntas de seleccion simple." do
- 			@pregunta1 = "1.-)¿Cual es la salida del siguiente codigo Ruby?\nclass Xyz\n\tdef pots\n\t\t@nice\n\tend\nend\n\nxyz = Xyz.new\np xyz.pots"
+ 			@pregunta1 = "1.-)Cual es la salida del siguiente codigo Ruby?\nclass Xyz\n\tdef pots\n\t\t@nice\n\tend\nend\n\nxyz = Xyz.new\np xyz.pots"
 			@optionsP1 = {
 				"a" => "#<Xyz:0xa000208>",
 				"b" => "nil",
@@ -70,14 +70,14 @@ describe Exam do
 				"a" => "Cierto",
 				"b" => "Falso",
 			}
-			@pregunta3 = "3.-)¿Cual es la salida del siguiente codigo en Ruby?\nclass Array\n\tdef say_hi\n\t\t\"HEY!\"\n\tend\nend\n\np [1, \"bob\"].say_hi"
+			@pregunta3 = "3.-)Cual es la salida del siguiente codigo en Ruby?\nclass Array\n\tdef say_hi\n\t\t\"HEY!\"\n\tend\nend\n\np [1, \"bob\"].say_hi"
 			@optionsP3 = {
 				"a" => "1",
 				"b" => "Bob",
 				"c" => "HEY!",
 				"D" => "Ninguna de las anteriores"
 			}
-			@pregunta4 = "4.-)¿Cual es el tipo del objeto en el siguiente codigo en Ruby?\nclass Objeto\nend"
+			@pregunta4 = "4.-)Cual es el tipo del objeto en el siguiente codigo en Ruby?\nclass Objeto\nend"
 			@optionsP4 = {
 				"a" => "Una instancia de la clase Class",
 				"b" => "Una constante",
@@ -118,14 +118,14 @@ describe Exam do
 				"c" => "Un objeto",
 				"D" => "Ninguna de las anteriores"
  			}
- 			@sS2 = Simple_Selection.new("¿Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend\n",@optionsSs2)
+ 			@sS2 = Simple_Selection.new("Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend\n",@optionsSs2)
  		end
  	end
 
  	describe "# Ejemplo del enunciado de la practica 7. (Lista doblemente enlazada, Herencia en las preguntas)." do
  		it "Introduzco en una lista doblemente enlazada una pregunta de seleccion simple y otra de verdadero o falso." do
  			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.")
-			myNormalQuestion = Simple_Selection.new("¿Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend",@optionsP3)
+			myNormalQuestion = Simple_Selection.new("Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend",@optionsP3)
 			MyNewExam = List.new(myNormalQuestion)
 			MyNewExam.add(myAskTrue)
  		end
@@ -134,7 +134,7 @@ describe Exam do
  	describe "# Comprobar que myAskTrue, myNormalQuestion son de clases diferentes." do
  		it "Creo varias preguntas y con el metodo is_a pregunto que tipo de clase es." do
  			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.")
- 			myNormalQuestion = Simple_Selection.new("¿Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend",@optionsP3)
+ 			myNormalQuestion = Simple_Selection.new("Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend",@optionsP3)
  			expect(myAskTrue.is_a? TrueFalse).to eq(true)
  			expect(myNormalQuestion.is_a? Simple_Selection).to eq(true)
  		end
@@ -143,7 +143,7 @@ describe Exam do
  	describe "# Practica 8: Comprobar que el los metodos comparable se han introducido correctamente." do
  		it "Creo dos preguntas y comparo su dificultad." do
  			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.",8)
-			myNormalQuestion = Simple_Selection.new("¿Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
+			myNormalQuestion = Simple_Selection.new("Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
 			myThirdQuestion = TrueFalse.new("Rellenando la lista.",5)
 			x = myAskTrue > myNormalQuestion
 			expect(x).to eq(true)
@@ -159,7 +159,7 @@ describe Exam do
 	describe "# Practica 8: Comprobar el metodo Enumerable en la clase List." do
 		it "Creo dos preguntas, las introduzco en una lista y miro cual tiene mayor dificultad." do
 			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.",8)
-			myNormalQuestion = Simple_Selection.new("¿Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
+			myNormalQuestion = Simple_Selection.new("Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
 			MyNewExam = List.new(myNormalQuestion)
 			MyNewExam.add(myAskTrue)
 			x = MyNewExam.all?
@@ -174,7 +174,7 @@ describe Exam do
 
 		it "# Practica 8: Tercera comprobacion del metodo Enumerable introduciendo preguntas a la lista." do
 			myAskTrue = TrueFalse.new("Es apropiado que una clase Tablero herede de una clase Juego.",8)
-			myNormalQuestion = Simple_Selection.new("¿Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
+			myNormalQuestion = Simple_Selection.new("Cual es el tipo de objeto en el siguiente codigo en Ruby?\n\tclass Objeto\n\tend",@optionsP3,3)
 			MyNewExam = List.new(myNormalQuestion)
 			MyNewExam.add(myAskTrue)
 			x = MyNewExam.all?
