@@ -4,7 +4,7 @@ require_relative 'trueFalse'
 
 class Examen
 
-	attr_reader :examAnswers
+	attr_reader :examAnswers, :myExam
 
 	def initialize(questions,answers)
 		@myExam = List.new("\n\tLenguajes y Paradigmas de la programación.\n\t\tExamen práctico.\n\n")
