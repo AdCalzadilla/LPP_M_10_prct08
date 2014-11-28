@@ -229,8 +229,8 @@ describe Exam do
 
 			interfaceExamen = Interface.new(mySecondExamen)
 
-			x = interfaz.reverse_exam.class
-			expect(x).to eq("Array")
+			x = interfaceExamen.reverse_exam.class
+			expect(x).to eq(Array)
 		end
 	end
 end

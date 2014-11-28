@@ -29,6 +29,10 @@ class Interface
 		end
 	end
 
+	def reverse_exam
+		@theExam.myExam.reverse_each.map{|e| e}
+	end
+
 	private
 	def pass
 		@userAnswers.size()/2 < @numRight
