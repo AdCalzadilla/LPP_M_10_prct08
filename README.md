@@ -18,3 +18,6 @@ Aprovechando la práctica anterior continuar desarrollando los siguientes aparta
 * Representar un examen con las clases implementadas anteriormente.
 * Representar el examen en una interfaz de usuario.
 * Uso de la herraminta Coverall.
+### Práctica 10.
+* Diseñar e implementar un método que invierta el orden de las preguntas de un examen usando programación funcional.
+* Documentar la gema usando RDOC y YARD.

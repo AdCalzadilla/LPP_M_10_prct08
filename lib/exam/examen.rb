@@ -7,7 +7,7 @@ class Examen
 	attr_reader :examAnswers, :myExam
 
 	def initialize(questions,answers)
-		@myExam = List.new("\n\tLenguajes y Paradigmas de la programación.\n\t\tExamen práctico.\n\n")
+		@myExam = List.new("\n\tLenguajes y Paradigmas de la programacion.\n\t\tExamen práctico.\n\n")
 		@myExam.add_many(questions)
 		@examAnswers = answers
 	end

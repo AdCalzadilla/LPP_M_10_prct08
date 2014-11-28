@@ -210,6 +210,27 @@ describe Exam do
 			mySecondExamen = Examen.new(myQuestions,myAnswers)
 
 			interfaceExamen = Interface.new(mySecondExamen)
+
+			x = interfaceExamen.is_a?Interface
+			expect(x).to eq(true) 
+		end
+	end
+
+	describe "# Practica 10: Programacion funcional." do
+		it "# Practica 10: Invertir el orden usando programacion funcional." do
+			pS1 = Simple_Selection.new(@pregunta1,@optionsP1)
+			pT1 = TrueFalse.new("2.-) Es apropiado que una clase Tablero herede de una clase Juego.",8)
+			pT2 = TrueFalse.new("3.-) En Ruby todo es un objeto.",2)
+
+			myQuestions = [pS1,pT1,pT2]
+			myAnswers = ["b","b","a"]
+
+			mySecondExamen = Examen.new(myQuestions,myAnswers)
+
+			interfaceExamen = Interface.new(mySecondExamen)
+
+			x = interfaz.reverse_exam.class
+			expect(x).to eq("Array")
 		end
 	end
 end
