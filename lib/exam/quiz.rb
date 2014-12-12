@@ -13,8 +13,7 @@ class Quiz
        			instance_eval &block 
       		end
     end
-    #myExam = Examen.new(@exam_Questions,@exam_Answers)
-    #@interface = Interface.new(myExam)
+
 	end
 
 	def to_s
