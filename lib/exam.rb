@@ -5,6 +5,7 @@ require "exam/list"
 require "exam/trueFalse"
 require "exam/examen"
 require "exam/interface"
+require "exam/quiz"
 
 module Exam
   # Your code goes here...

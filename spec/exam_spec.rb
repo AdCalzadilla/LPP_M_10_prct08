@@ -243,7 +243,7 @@ describe Exam do
                 right => "4"
         	end
 
-        	expect(quiz.to_s).to eq("Examen Lenguaje y paradigmas de programacion.\n#{'=' * 45}\n\n1) 2+2\n17\n25\n4")
+        	expect(quiz.to_s).to eq("Examen Lenguaje y paradigmas de programacion.\n#{'=' * 45}\n\n1) 2+2\n17\n25\n4\n")
 		end
 	end
 end
