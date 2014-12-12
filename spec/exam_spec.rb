@@ -233,6 +233,19 @@ describe Exam do
 			expect(x).to eq(Array)
 		end
 	end
+
+	describe "# Practica 11." do
+		it "# Creacion de la clase quiz." do
+			quiz = Quiz.new do
+            	questionExam "2+2",
+                wrong => "17",
+                wrong => "25",
+                right => "4"
+        	end
+
+        	expect(quiz.to_s).to eq("Examen Lenguaje y paradigmas de programacion.\n#{'=' * 45}\n\n1) 2+2\n17\n25\n4")
+		end
+	end
 end
 
 
