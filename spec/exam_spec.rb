@@ -278,6 +278,18 @@ describe Exam do
 			threadNaranjo2.join
 			expect(naranjo2.recolectar_una).to eq("No hay fruta")
 		end
+
+		it 'Comprobar que el naranjo este muerto.' do
+			naranjo3 = Naranjo.new
+
+			threadNaranjo3 = Thread.new do
+				31.times do
+					naranjo3.uno_mas
+				end
+			end
+			threadNaranjo3.join
+			expect(naranjo3.isDead?).to eq(true)
+		end
 	end
 end
 
