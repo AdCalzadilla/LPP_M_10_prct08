@@ -6,6 +6,7 @@ require "exam/trueFalse"
 require "exam/examen"
 require "exam/interface"
 require "exam/quiz"
+require "naranjo"
 
 module Exam
   # Your code goes here...

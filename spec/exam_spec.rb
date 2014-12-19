@@ -246,6 +246,15 @@ describe Exam do
         	expect(quiz.to_s).to eq("Examen Lenguaje y paradigmas de programacion.\n#{'=' * 45}\n\n1) 2+2\n17\n25\n4\n")
 		end
 	end
+
+	describe 'Practica 12: Naranjo' do
+		it 'Se crea una instancia de la clase Naranjo' do
+			@naranjero1 = Naranjo.new
+	        expect(@naranjero1.age).to eq(0)
+	        expect(@naranjero1.hight).to eq(0)
+	        expect(@naranjero1.numNaranjas).to eq(0)
+		end
+	end
 end
 
 
