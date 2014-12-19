@@ -254,6 +254,18 @@ describe Exam do
 	        expect(@naranjero1.hight).to eq(0)
 	        expect(@naranjero1.numNaranjas).to eq(0)
 		end
+
+		it 'Compruebo la edad' do
+			@naranjo1 = Naranjo.new
+
+			@threadNaranjo = Thread.new do
+			    20.times do
+			      @naranjo1.uno_mas
+     			end
+     		end
+     		@threadNaranjo.join
+   			expect(@naranjo1.age).to eq(20)
+		end
 	end
 end
 
