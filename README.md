@@ -24,3 +24,10 @@ Aprovechando la práctica anterior continuar desarrollando los siguientes aparta
 ### Práctica 10.
 * Diseñar e implementar un método que invierta el orden de las preguntas de un examen usando programación funcional.
 * Documentar la gema usando RDOC y YARD.
+
+### Práctica 11.
+* Lenguajes de dominio específico.
+* Publicación de la gema en rubygems.org (falla).
+
+### Práctica 12.
+* Programación con hilos.
