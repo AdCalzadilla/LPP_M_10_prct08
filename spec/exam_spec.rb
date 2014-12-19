@@ -266,6 +266,18 @@ describe Exam do
      		@threadNaranjo.join
    			expect(@naranjo1.age).to eq(20)
 		end
+
+		it 'Recolecta de naranjas antes de los 5 anios' do
+			naranjo2 = Naranjo.new
+
+			threadNaranjo2 = Thread.new do
+				4.times do
+					naranjo2.uno_mas
+				end
+			end
+			threadNaranjo2.join
+			expect(naranjo2.recolectar_una).to eq("No hay fruta")
+		end
 	end
 end
 
