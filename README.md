@@ -1,4 +1,4 @@
-# Exam prácticas 6, 7, 8, 9 y 10.
+# Exam, prácticas 6, 7, 8, 9, 10, 11 y 12.
 
 ## Miembros del grupo.
 * Adrián Calzadilla González.
